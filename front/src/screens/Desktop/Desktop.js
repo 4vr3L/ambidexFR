@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
-import { Card } from "../../components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,6 +15,16 @@ import { PricingSection } from "./sections/PricingSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { TeamSection } from "./sections/TeamSection/TeamSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection/TestimonialsSection";
+
+// Import images
+import image1White from "../../photos/image1_white.png";
+import image1Colored from "../../photos/image1_colored.png";
+import image2White from "../../photos/image2_white.png";
+import image2Colored from "../../photos/image2_colored.png";
+import image3White from "../../photos/image3_white.png";
+import image3Colored from "../../photos/image3_colored.png";
+import image4White from "../../photos/image4_white.png";
+import image4Colored from "../../photos/image4_colored.png";
 
 export const Desktop = () => {
   // Partner logos data
@@ -231,32 +241,147 @@ export const Desktop = () => {
             src="https://c.animaapp.com/mbefdp65f3u1c4/img/vector-2047.svg"
           />
 
-          <div className="flex flex-wrap justify-center mt-16">
-            <img
-              className="w-[604px] h-[287px]"
-              alt="Proposition"
-              src="https://c.animaapp.com/mbefdp65f3u1c4/img/proposition.svg"
-            />
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-16 px-2 sm:px-4">
+            {/* Card 1: Premier Contact */}
+            <Card className="w-full sm:w-[85%] md:w-[48%] bg-black rounded-[45px] border-2 border-transparent hover:border-[#bfff00] transition-all duration-300 group">
+              <CardContent className="p-4 sm:p-6 md:p-8 h-auto sm:h-[287px] flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <div className="flex-1 text-center sm:text-left">
+                  <h3 className="font-['Montserrat',Helvetica] font-bold text-[#bfff00] text-xl sm:text-2xl mb-4 sm:mb-6">
+                    Premier Contact & Qualification
+                  </h3>
+                  <div className="text-white space-y-2 sm:space-y-4">
+                    <p>
+                      <span className="font-bold">Prise de contact:</span><br />
+                      Le client vous contacte. Premier échange pour cerner son besoin.
+                    </p>
+                    <p>
+                      <span className="font-bold">Analyse des besoins:</span><br />
+                      Discussion du projet, objectifs et technologies. Consultation gratuite si besoin.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full sm:w-1/2 h-[200px] sm:h-full flex items-center justify-center">
+                  <div className="relative w-[160px] sm:w-[200px] h-[160px] sm:h-[200px]">
+                    <img
+                      className="w-full h-full object-contain opacity-50 group-hover:opacity-0 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Premier Contact - Black"
+                      src={image1White}
+                    />
+                    <img
+                      className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Premier Contact - Color"
+                      src={image1Colored}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-            <div className="flex mt-8">
-              <img
-                className="w-[608px] h-[287px]"
-                alt="Suivi"
-                src="https://c.animaapp.com/mbefdp65f3u1c4/img/suivi.svg"
-              />
+            {/* Card 2: Proposition */}
+            <Card className="w-full sm:w-[85%] md:w-[48%] bg-black rounded-[45px] border-2 border-transparent hover:border-[#bfff00] transition-all duration-300 group">
+              <CardContent className="p-4 sm:p-6 md:p-8 h-auto sm:h-[287px] flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <div className="flex-1 text-center sm:text-left">
+                  <h3 className="font-['Montserrat',Helvetica] font-bold text-[#bfff00] text-xl sm:text-2xl mb-4 sm:mb-6">
+                    Proposition & Validation
+                  </h3>
+                  <div className="text-white space-y-2 sm:space-y-4">
+                    <p>
+                      <span className="font-bold">Rédaction d'une proposition:</span><br />
+                      Devis détaillé avec étapes, délais et budget. Proposition d'un modèle de collaboration.
+                    </p>
+                    <p>
+                      <span className="font-bold">Validation et contractualisation:</span><br />
+                      Ajustements de la proposition si besoin, signature du contrat et planning de réalisation.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full sm:w-1/2 h-[200px] sm:h-full flex items-center justify-center">
+                  <div className="relative w-[160px] sm:w-[200px] h-[160px] sm:h-[200px]">
+                    <img
+                      className="w-full h-full object-contain opacity-50 group-hover:opacity-0 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Proposition - Black"
+                      src={image2White}
+                    />
+                    <img
+                      className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Proposition - Color"
+                      src={image2Colored}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-              <img
-                className="w-[606px] h-[289px] ml-6"
-                alt="Livraison"
-                src="https://c.animaapp.com/mbefdp65f3u1c4/img/livraison.svg"
-              />
-            </div>
+            {/* Card 3: Suivi */}
+            <Card className="w-full sm:w-[85%] md:w-[48%] bg-black rounded-[45px] border-2 border-transparent hover:border-[#bfff00] transition-all duration-300 group">
+              <CardContent className="p-4 sm:p-6 md:p-8 h-auto sm:h-[287px] flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <div className="flex-1 text-center sm:text-left">
+                  <h3 className="font-['Montserrat',Helvetica] font-bold text-[#bfff00] text-xl sm:text-2xl mb-4 sm:mb-6">
+                    Développement & Suivi
+                  </h3>
+                  <div className="text-white space-y-2 sm:space-y-4">
+                    <p>
+                      <span className="font-bold">Lancement du projet:</span><br />
+                      Mise en place des ressources nécessaires, des étapes et suivi régulier.
+                    </p>
+                    <p>
+                      <span className="font-bold">Feedback et ajustements:</span><br />
+                      Points d'avancement périodiques, corrections et améliorations.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full sm:w-1/2 h-[200px] sm:h-full flex items-center justify-center">
+                  <div className="relative w-[160px] sm:w-[200px] h-[160px] sm:h-[200px]">
+                    <img
+                      className="w-full h-full object-contain opacity-50 group-hover:opacity-0 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Suivi - Black"
+                      src={image3White}
+                    />
+                    <img
+                      className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Suivi - Color"
+                      src={image3Colored}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Card 4: Livraison */}
+            <Card className="w-full sm:w-[85%] md:w-[48%] bg-black rounded-[45px] border-2 border-transparent hover:border-[#bfff00] transition-all duration-300 group">
+              <CardContent className="p-4 sm:p-6 md:p-8 h-auto sm:h-[287px] flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <div className="flex-1 text-center sm:text-left">
+                  <h3 className="font-['Montserrat',Helvetica] font-bold text-[#bfff00] text-xl sm:text-2xl mb-4 sm:mb-6">
+                    Livraison & Support
+                  </h3>
+                  <div className="text-white space-y-2 sm:space-y-4">
+                    <p>
+                      <span className="font-bold">Mise en ligne & formation:</span><br />
+                      Déploiement du projet et formation si nécessaire.
+                    </p>
+                    <p>
+                      <span className="font-bold">Maintenance & évolution:</span><br />
+                      Suivi technique, maintenance et accompagnement futur.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full sm:w-1/2 h-[200px] sm:h-full flex items-center justify-center">
+                  <div className="relative w-[160px] sm:w-[200px] h-[160px] sm:h-[200px]">
+                    <img
+                      className="w-full h-full object-contain opacity-50 group-hover:opacity-0 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Livraison - Black"
+                      src={image4White}
+                    />
+                    <img
+                      className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
+                      alt="Livraison - Color"
+                      src={image4Colored}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="relative w-full mt-16">
-          <FeaturesSection />
         </section>
 
         {/* Team Section */}
@@ -327,18 +452,73 @@ export const Desktop = () => {
         </section>
 
         {/* Footer Section */}
-        <section className="relative w-full">
-          <FooterSection />
+        <section className="relative w-full bg-black">
+          <div className="max-w-[1240px] mx-auto px-8 py-16">
+            <div className="flex flex-col items-start">
+              {/* Logo and Navigation */}
+              <div className="w-full flex flex-wrap justify-between items-center mb-16">
+                {/* Logo */}
+                <img 
+                  src="https://c.animaapp.com/mbefdp65f3u1c4/img/vector.svg"
+                  alt="Ambidex Logo" 
+                  className="h-6 mb-8 md:mb-0"
+                />
+                
+                {/* Navigation */}
+                <div className="flex items-center gap-8">
+                  <a href="#home" className="text-white hover:text-[#bfff00] transition-all duration-300 font-['Montserrat']">Home</a>
+                  <a href="#about" className="text-white hover:text-[#bfff00] transition-all duration-300 font-['Montserrat']">About Us</a>
+                  <a href="#services" className="text-white hover:text-[#bfff00] transition-all duration-300 font-['Montserrat']">Services</a>
+                  <a href="#blog" className="text-white hover:text-[#bfff00] transition-all duration-300 font-['Montserrat']">Blog</a>
+                  <a href="#projects" className="text-white hover:text-[#bfff00] transition-all duration-300 font-['Montserrat']">Projects</a>
+                  <a href="#contact" className="text-white hover:text-[#bfff00] transition-all duration-300 font-['Montserrat']">Contact</a>
+                </div>
+              </div>
 
-          <div className="flex items-center justify-center gap-[42px] py-8">
-            {socialIcons.map((icon, index) => (
-              <img
-                key={index}
-                className="w-16 h-16"
-                alt={icon.alt}
-                src={icon.src}
-              />
-            ))}
+              {/* Contact Button and Newsletter */}
+              <div className="w-full flex flex-wrap justify-between items-stretch gap-8">
+                {/* Contact Info Box */}
+                <div className="flex-1 min-w-[280px] max-w-[400px] bg-[#0A0A0A] rounded-[20px] p-8 border border-[#bfff0020] group hover:border-[#bfff0040] transition-all duration-500">
+                  <div className="space-y-6">
+                    <button className="bg-[#bfff00] text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-[#a8e600] transition-all duration-300 transform hover:-translate-y-[2px] hover:shadow-lg hover:shadow-[#bfff0020]">
+                      Contact us
+                    </button>
+                    <div className="text-[#949494] font-['Montserrat'] text-sm space-y-3">
+                      <p className="flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-[#bfff00] opacity-50"></span>
+                        Address: 1234 Main St
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-[#bfff00] opacity-50"></span>
+                        Moonstone City, Stardust State 12345
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Newsletter Box */}
+                <div className="flex-1 min-w-[280px] bg-[#0A0A0A] rounded-[20px] p-8 border border-[#bfff0020] group hover:border-[#bfff0040] transition-all duration-500">
+                  <div className="space-y-6">
+                    <h3 className="text-white font-['Montserrat'] text-lg font-medium">Subscribe to our newsletter</h3>
+                    <div className="flex gap-3">
+                      <input 
+                        type="email" 
+                        placeholder="Enter Your Email" 
+                        className="flex-1 bg-black border border-[#333] rounded-full px-6 py-3 text-white text-sm placeholder:text-[#666] focus:outline-none focus:border-[#bfff00] focus:shadow-lg focus:shadow-[#bfff0010] transition-all duration-300 font-['Montserrat']"
+                      />
+                      <button className="bg-[#bfff00] text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-[#a8e600] transition-all duration-300 transform hover:-translate-y-[2px] hover:shadow-lg hover:shadow-[#bfff0020] whitespace-nowrap">
+                        Subscribe newsletter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Copyright */}
+              <div className="w-full mt-12 pt-8 border-t border-[#333] text-sm text-[#949494] font-['Montserrat']">
+                <p>© 2025 Ambidex. All Rights Reserved.</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
