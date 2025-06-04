@@ -30,6 +30,16 @@ export const ContactSection = () => {
   return (
     <section className="w-full py-8 sm:py-12 md:py-16">
       <div className="flex flex-col items-center px-4 sm:px-6 md:px-8">
+      <div className="flex flex-col items-center mb-12">
+        <h2 className="font-['Montserrat',Helvetica] font-bold text-white text-[40px]">
+          Contact Us
+        </h2>
+        <img
+          className="w-[246px] h-[22px] mt-3"
+          alt="Decorative underline"
+          src="https://c.animaapp.com/mbefdp65f3u1c4/img/vector-2046.svg"
+        />
+      </div>
         <div className="w-full max-w-[1240px]">
           <Card className="bg-[#000000] rounded-[45px] border border-solid border-[#bfff003b] shadow-[0_0_20px_rgba(191,255,0,0.15)]">
             <CardContent className="flex flex-col lg:flex-row justify-between gap-8 p-8 sm:p-12">

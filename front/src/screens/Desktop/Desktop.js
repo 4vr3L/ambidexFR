@@ -129,8 +129,8 @@ export const Desktop = () => {
     <div className="bg-black flex flex-col items-center w-full">
       {/* Fixed Navigation */}
       {/* <header className="fixed z-50 w-full max-w-[1252px] top-[50px] px-4"> */}
-        <Card className="  z-50 max-w-[1252px] top-[50px] px-4 relative w-full h-[62px] bg-[#000000cc] rounded-[1000px] backdrop-blur-[7.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(7.5px)_brightness(100%)] border-none">
-          <div className="flex items-center justify-between h-full px-8">
+        <Card className="  z-50 max-w-[1252px] top-[50px] px-4 relative w-full h-[62px] bg-[#000000cc] rounded-[1000px] backdrop-blur-[7.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(7.5px)_brightness(100%)] border-[#bfff003b] ">
+          <div className="flex items-center justify-between h-full px-1">
             <img
               className="w-[134px] h-[18px]"
               alt="Vector"
@@ -166,22 +166,39 @@ export const Desktop = () => {
         <section className="relative w-full">
           <div className="w-full h-[834px] shadow-[inset_0px_4px_191.6px_178px_#000000e0] [background:linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[0.74]" />
 
-          <div className="absolute w-full h-[1370px] top-[269px] left-0 rotate-[91.45deg]">
-            <img
-              className="absolute w-[1354px] h-[1405px] top-[-43px] left-2 rotate-[-91.45deg] object-cover"
-              alt="Dsprsd"
-              src="https://c.animaapp.com/mbefdp65f3u1c4/img/dsprsd.png"
-            />
-          </div>
-
-          <div className="absolute w-full h-[1324px] top-[513px] left-0 [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
-
           <div className="absolute top-0 left-0 w-full">
             <HeroSection />
-            <Button className="absolute top-[448px] left-1/2 transform -translate-x-1/2 h-[42px] bg-[#bfff00] rounded-[1000px] text-black font-['Montserrat',Helvetica] font-bold text-[15px]">
+            <Button className="absolute top-[368px] left-1/2 transform -translate-x-1/2 h-[42px] bg-[#bfff00] rounded-[1000px] text-black font-['Montserrat',Helvetica] font-bold text-[15px] w-44 z-10">
               Contactez-nous
             </Button>
           </div>
+
+          {/* Image container with smooth overflow masking */}
+          <div className="absolute w-full max-w-[1354px] h-[600px] left-1/2 -translate-x-1/2 top-[400px] overflow-hidden opacity-100">
+            <div className="relative w-full h-full">
+              <img
+                className="absolute w-full h-auto max-w-none"
+                alt="Dsprsd"
+                src="https://c.animaapp.com/mbefdp65f3u1c4/img/dsprsd.png"
+                style={{
+                  mixBlendMode: 'screen',
+                  objectFit: 'cover',
+                  objectPosition: 'center top',
+                  maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
+                }}
+              />
+              {/* Smooth edge overlays */}
+              <div className="absolute inset-0 pointer-events-none" style={{
+                background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, transparent 10%, transparent 90%, rgba(0,0,0,1) 100%)',
+                mixBlendMode: 'multiply'
+              }} />
+              <div className="absolute inset-x-0 top-0 h-20 pointer-events-none bg-gradient-to-b from-black to-transparent opacity-50" />
+              <div className="absolute inset-x-0 bottom-0 h-20 pointer-events-none bg-gradient-to-t from-black to-transparent opacity-50" />
+            </div>
+          </div>
+
+          <div className="absolute w-full h-[1324px] top-[513px] left-0 [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
         </section>
 
         {/* Services Section */}
@@ -273,7 +290,7 @@ export const Desktop = () => {
                       src={image1Colored}
                     />
                   </div>
-                </div>
+            </div>
               </CardContent>
             </Card>
 
@@ -306,8 +323,8 @@ export const Desktop = () => {
                       className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
                       alt="Proposition - Color"
                       src={image2Colored}
-                    />
-                  </div>
+              />
+            </div>
                 </div>
               </CardContent>
             </Card>
@@ -341,8 +358,8 @@ export const Desktop = () => {
                       className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
                       alt="Suivi - Color"
                       src={image3Colored}
-                    />
-                  </div>
+              />
+            </div>
                 </div>
               </CardContent>
             </Card>
@@ -376,8 +393,8 @@ export const Desktop = () => {
                       className="w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0"
                       alt="Livraison - Color"
                       src={image4Colored}
-                    />
-                  </div>
+              />
+            </div>
                 </div>
               </CardContent>
             </Card>
@@ -478,7 +495,7 @@ export const Desktop = () => {
               {/* Contact Button and Newsletter */}
               <div className="w-full flex flex-wrap justify-between items-stretch gap-8">
                 {/* Contact Info Box */}
-                <div className="flex-1 min-w-[280px] max-w-[400px] bg-[#0A0A0A] rounded-[20px] p-8 border border-[#bfff0020] group hover:border-[#bfff0040] transition-all duration-500">
+                <div className="flex-1 min-w-[280px] max-w-[400px] bg-[#0A0A0A] rounded-[20px] p-8  border-[#bfff0020] group hover:border-[#bfff0040] transition-all duration-500">
                   <div className="space-y-6">
                     <button className="bg-[#bfff00] text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-[#a8e600] transition-all duration-300 transform hover:-translate-y-[2px] hover:shadow-lg hover:shadow-[#bfff0020]">
                       Contact us

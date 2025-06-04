@@ -2,7 +2,7 @@ import React from "react";
 
 export const HeroSection = () => {
   return (
-    <section className="flex justify-center items-center py-16 w-full">
+    <section className="flex justify-center items-center py-16 w-full mt-12">
       <div className="flex flex-col items-center max-w-4xl">
         <h1 className="font-['Montserrat',Helvetica] text-center text-5xl">
           <span className="font-extrabold text-white">
@@ -24,7 +24,7 @@ export const HeroSection = () => {
         </div>
 
         <p className="font-['Montserrat',Helvetica] text-center text-2xl">
-          <span className="font-light text-white">
+          <span className="font-thin text-white">
             Trouvez le bon développeur en{" "}
           </span>
           <span className="font-bold text-white">un clic!</span>
