@@ -15,7 +15,7 @@ import { PricingSection } from "./sections/PricingSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { TeamSection } from "./sections/TeamSection/TeamSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection/TestimonialsSection";
-
+import { PortfolioSection } from "./sections/PortfolioSection/PortfolioSection"
 // Import images
 import image1White from "../../photos/image1_white.png";
 import image1Colored from "../../photos/image1_colored.png";
@@ -80,34 +80,39 @@ export const Desktop = () => {
     },
   ];
 
-  // Portfolio images
-  const portfolioImages = [
-    {
-      src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-90.png",
-      alt: "Frame",
-      width: "244px",
-    },
-    {
-      src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-95.png",
-      alt: "Frame",
-      width: "292px",
-    },
-    {
-      src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-96.png",
-      alt: "Frame",
-      width: "292px",
-    },
-    {
-      src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-97.png",
-      alt: "Frame",
-      width: "292px",
-    },
-    {
-      src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-98.png",
-      alt: "Frame",
-      width: "268px",
-    },
-  ];
+  // // Portfolio images
+  // const portfolioImages = [
+  //   {
+  //     src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-90.png",
+  //     alt: "Frame",
+  //     width: "244px",
+  //     text: "Walky\nFitness app"
+  //   },
+  //   {
+  //     src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-95.png",
+  //     alt: "Frame",
+  //     width: "292px",
+  //     text: "Twist Click\nLogo design"
+  //   },
+  //   {
+  //     src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-96.png",
+  //     alt: "Frame",
+  //     width: "292px",
+  //     text: "Genie\nPar Gims"
+  //   },
+  //   {
+  //     src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-97.png",
+  //     alt: "Frame",
+  //     width: "292px",
+  //     text: "Amp Fresh\nBranding"
+  //   },
+  //   {
+  //     src: "https://c.animaapp.com/mbefdp65f3u1c4/img/frame-98.png",
+  //     alt: "Frame",
+  //     width: "268px",
+  //     text: "Souls\mMusic App"
+  //   },
+  // ];
 
   // Social media icons
   const socialIcons = [
@@ -218,34 +223,8 @@ export const Desktop = () => {
         </section>
 
         {/* Portfolio Section */}
-        <section className="relative w-full mt-16">
-          <div className="w-full h-[834px] rotate-180 shadow-[inset_0px_4px_191.6px_178px_#000000e0] [background:linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[0.74]" />
-
-          <div className="absolute w-full top-[93px] left-0">
-            <h2 className="text-center font-['Montserrat',Helvetica] font-bold text-white text-[40px] tracking-[0] leading-[normal]">
-              Nos Réalisations
-            </h2>
-
-            <img
-              className="mx-auto w-[297px] h-[25px] mt-4"
-              alt="Vector"
-              src="https://c.animaapp.com/mbefdp65f3u1c4/img/vector-2043.svg"
-            />
-
-            <div className="flex justify-center gap-4 mt-[120px]">
-              {portfolioImages.map((image, index) => (
-                <img
-                  key={index}
-                  className="h-[392px] object-cover"
-                  style={{ width: image.width }}
-                  alt={image.alt}
-                  src={image.src}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
+        <PortfolioSection />
+       
         {/* Process Section */}
         <section className="relative w-full mt-16 pt-16">
           <h2 className="text-center font-['Montserrat',Helvetica] font-bold text-white text-[40px] tracking-[0] leading-[normal]">
